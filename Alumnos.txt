@@ -1,0 +1,15 @@
+
+ Alumno: Lautaro Fernandez Szutner
+ cuatrimestre: 2do de 2023
+ comisión: DWT2AV
+ Turno: Tarde
+ Materia: Programacion I
+ Profesor: Corbalan Cristian Ariel
+
+
+ Alumno: Nahuel Miño Nahuel Benjamín
+ cuatrimestre: 2do de 2023
+ comisión: DWT2AV
+ Turno: Tarde
+ Materia: Programacion I
+ Profesor: Corbalan Cristian Ariel
