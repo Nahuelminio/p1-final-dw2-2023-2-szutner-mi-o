@@ -8,57 +8,57 @@ let carritoArray = [];
 let productos = [
   {
     id: 1,
-    nombre: "RAZER HUNTSMAN V3 PRO",
-    descripcion: "Teclado óptico analógico para esports",
+    nombre: 'RAZER HUNTSMAN V3 PRO',
+    descripcion: 'Teclado óptico analógico para esports',
     precio: 500,
-    imagen: "fotos/teclado1.webp",
-    alt: "Iphone 12",
-    categoría: "Celulares",
+    imagen: 'fotos/Productos/teclado1.webp',
+    alt: 'Iphone 12',
+    categoría: 'Celulares',
   },
   {
     id: 2,
-    nombre: "RAZER TENKEYLESS",
-    descripcion: "Teclado óptico analógico para esports ",
+    nombre: 'RAZER TENKEYLESS',
+    descripcion: 'Teclado óptico analógico para esports ',
     precio: 1000,
-    imagen: "fotos/teclado2.webp",
-    alt: "Macbook air",
-    categoría: "Laptop",
+    imagen: 'fotos/Productos/teclado2.webp',
+    alt: 'Macbook air',
+    categoría: 'Laptop',
   },
   {
     id: 3,
-    nombre: "RAZER HUNTSMAN V3 PRO ",
-    descripcion: "Teclado óptico analógico para esports 60%",
+    nombre: 'RAZER HUNTSMAN V3 PRO ',
+    descripcion: 'Teclado óptico analógico para esports 60%',
     precio: 200,
-    imagen: "fotos/teclado3.webp",
-    alt: "Airpods 3",
-    categoría: "Accesorios",
+    imagen: 'fotos/Productos/teclado3.webp',
+    alt: 'Airpods 3',
+    categoría: 'Accesorios',
   },
   {
     id: 4,
-    nombre: "RAZER HUNTSMAN MINI",
-    descripcion: "Teclado para juegos de tamaño 60 % ",
+    nombre: 'RAZER HUNTSMAN MINI',
+    descripcion: 'Teclado para juegos de tamaño 60 % ',
     precio: 1500,
-    imagen: "fotos/teclado4.webp",
-    alt: "Iphone 15 pro max",
-    categoría: "Celulares",
+    imagen: 'fotos/Productos/teclado4.webp',
+    alt: 'Iphone 15 pro max',
+    categoría: 'Celulares',
   },
   {
     id: 5,
-    nombre: "Macbook pro ",
-    descripcion: "Descripción del producto",
+    nombre: 'Macbook pro ',
+    descripcion: 'Descripción del producto',
     precio: 2000,
-    imagen: "fotos/macbookpro.jpg",
-    alt: "Macbook pro",
-    categoría: "Laptops",
+    imagen: 'fotos/macbookpro.jpg',
+    alt: 'Macbook pro',
+    categoría: 'Laptops',
   },
   {
     id: 6,
-    nombre: "Apple Watch",
-    descripcion: "Descripción del producto",
+    nombre: 'Apple Watch',
+    descripcion: 'Descripción del producto',
     precio: 400,
-    imagen: "fotos/watch.webp",
-    alt: "Apple Watch",
-    categoría: "Accesorios",
+    imagen: 'fotos/watch.webp',
+    alt: 'Apple Watch',
+    categoría: 'Accesorios',
   },
 ];
 
@@ -102,7 +102,7 @@ for (let i = 0; i < 6; i++) {
   lista1.lastElementChild.appendChild(imagen);
 
   let div = crearEtiqueta('div', {});
-   div.classList.add("div-producto");
+  div.classList.add('div-producto');
   lista1.lastElementChild.append(div);
 
   let titulo1 = crearEtiqueta('h3', {}, productos[i].nombre);
@@ -111,24 +111,26 @@ for (let i = 0; i < 6; i++) {
   let parrafos1 = crearEtiqueta('p', {}, productos[i].descripcion);
   li.lastElementChild.append(parrafos1);
 
-  let parrafos2 = crearEtiqueta("p", {}, `$${ productos[i].precio}`);
+  let parrafos2 = crearEtiqueta('p', {}, `$${productos[i].precio}`);
   li.lastElementChild.append(parrafos2);
 
-  let parrafos3 = crearEtiqueta("p", {}, `Categoria: ${productos[i].categoría}`);
+  let parrafos3 = crearEtiqueta(
+    'p',
+    {},
+    `Categoria: ${productos[i].categoría}`
+  );
   li.lastElementChild.append(parrafos3);
 
   let boton = crearEtiqueta('button', {}, 'Agregar');
-  boton.classList.add("button-producto");
+  boton.classList.add('button-producto');
   li.lastElementChild.append(boton);
 
   //Evento Agregar Items
   boton.addEventListener('click', () => {
-   
-   
     acumulador += productos[i].precio;
     acumulado.innerText = '';
     acumulado.innerText += acumulador;
-     contador++;
+    contador++;
     minicarrito.innerText = contador;
     carritoArray.push(productos[i].id);
   });
