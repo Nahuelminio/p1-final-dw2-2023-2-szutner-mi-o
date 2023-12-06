@@ -47,7 +47,7 @@ let productos = [
     nombre: 'Macbook pro ',
     descripcion: 'Descripción del producto',
     precio: 2000,
-    imagen: 'fotos/macbookpro.jpg',
+    imagen: 'fotos/Productos/mouse1.jpg',
     alt: 'Macbook pro',
     categoría: 'Laptops',
   },
@@ -56,7 +56,27 @@ let productos = [
     nombre: 'Apple Watch',
     descripcion: 'Descripción del producto',
     precio: 400,
-    imagen: 'fotos/watch.webp',
+    imagen: 'fotos/Productos/mouse2.webp',
+    alt: 'Apple Watch',
+    categoría: 'Accesorios',
+  },
+
+  {
+    id: 7,
+    nombre: 'Apple Watch',
+    descripcion: 'Descripción del producto',
+    precio: 400,
+    imagen: 'fotos/Productos/mouse3.jpeg',
+    alt: 'Apple Watch',
+    categoría: 'Accesorios',
+  },
+
+  {
+    id: 8,
+    nombre: 'Apple Watch',
+    descripcion: 'Descripción del producto',
+    precio: 400,
+    imagen: 'fotos/Productos/mouse4.jpg',
     alt: 'Apple Watch',
     categoría: 'Accesorios',
   },
@@ -90,7 +110,7 @@ let acumulador = 0;
 let lista1 = crearEtiqueta('ul', { id: 'productos' });
 document.querySelector('main').appendChild(lista1);
 
-for (let i = 0; i < 6; i++) {
+for (let i = 0; i < 8; i++) {
   let li = crearEtiqueta('li', { id: productos[i].id });
   document.getElementById('productos').appendChild(li);
 
