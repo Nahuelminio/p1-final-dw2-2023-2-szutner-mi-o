@@ -13,7 +13,7 @@ let productos = [
     precio: 500,
     imagen: 'fotos/Productos/teclado1.webp',
     alt: 'Iphone 12',
-    categoría: 'Celulares',
+    categoría: 'Teclados',
   },
   {
     id: 2,
@@ -22,7 +22,7 @@ let productos = [
     precio: 1000,
     imagen: 'fotos/Productos/teclado2.webp',
     alt: 'Macbook air',
-    categoría: 'Laptop',
+    categoría: 'Teclados',
   },
   {
     id: 3,
@@ -31,7 +31,7 @@ let productos = [
     precio: 200,
     imagen: 'fotos/Productos/teclado3.webp',
     alt: 'Airpods 3',
-    categoría: 'Accesorios',
+    categoría: 'Teclados',
   },
   {
     id: 4,
@@ -40,7 +40,7 @@ let productos = [
     precio: 1500,
     imagen: 'fotos/Productos/teclado4.webp',
     alt: 'Iphone 15 pro max',
-    categoría: 'Celulares',
+    categoría: 'Teclados',
   },
   {
     id: 5,
@@ -49,7 +49,7 @@ let productos = [
     precio: 2000,
     imagen: 'fotos/Productos/mouse1.png',
     alt: 'Macbook pro',
-    categoría: 'Laptops',
+    categoría: 'Ratones',
   },
   {
     id: 6,
@@ -58,7 +58,7 @@ let productos = [
     precio: 400,
     imagen: 'fotos/Productos/mouse2.png',
     alt: 'Apple Watch',
-    categoría: 'Accesorios',
+    categoría: 'Ratones',
   },
 
   {
@@ -68,7 +68,7 @@ let productos = [
     precio: 400,
     imagen: 'fotos/Productos/mouse3.png',
     alt: 'Apple Watch',
-    categoría: 'Accesorios',
+    categoría: 'Ratones',
   },
 
   {
@@ -78,87 +78,87 @@ let productos = [
     precio: 400,
     imagen: 'fotos/Productos/mouse4.png',
     alt: 'Apple Watch',
-    categoría: 'Accesorios',
+    categoría: 'Ratones',
   },
 
   {
     id: 9,
-    nombre: 'Apple Watch',
+    nombre: 'Razer Atlas - Black',
     descripcion: 'Descripción del producto',
     precio: 400,
     imagen: 'fotos/Productos/pad1.png',
     alt: 'Apple Watch',
-    categoría: 'Accesorios',
+    categoría: 'Alfombrillas',
   },
 
   {
     id: 10,
-    nombre: 'Apple Watch',
+    nombre: 'Razer Atlas - White',
     descripcion: 'Descripción del producto',
     precio: 400,
     imagen: 'fotos/Productos/pad2.png',
     alt: 'Apple Watch',
-    categoría: 'Accesorios',
+    categoría: 'Alfombrillas',
   },
 
   {
     id: 11,
-    nombre: 'Apple Watch',
+    nombre: 'Razer Strider Chroma',
     descripcion: 'Descripción del producto',
     precio: 400,
     imagen: 'fotos/Productos/pad3.png',
     alt: 'Apple Watch',
-    categoría: 'Accesorios',
+    categoría: 'Alfombrillas',
   },
 
   {
     id: 12,
-    nombre: 'Apple Watch',
+    nombre: 'Razer Goliathus Chroma 3XL - Black',
     descripcion: 'Descripción del producto',
     precio: 400,
     imagen: 'fotos/Productos/pad4.png',
     alt: 'Apple Watch',
-    categoría: 'Accesorios',
+    categoría: 'Alfombrillas',
   },
 
   {
     id: 13,
-    nombre: 'Apple Watch',
+    nombre: 'RAZER BLACKSHARK V2 PRO',
     descripcion: 'Descripción del producto',
     precio: 400,
     imagen: 'fotos/Productos/auris1.jpg',
     alt: 'Apple Watch',
-    categoría: 'Accesorios',
+    categoría: 'Auriculares',
   },
 
   {
     id: 14,
-    nombre: 'Apple Watch',
+    nombre: 'RAZER BLACKSHARK V2 HYPERSPEED',
     descripcion: 'Descripción del producto',
     precio: 400,
     imagen: 'fotos/Productos/auris2.webp',
     alt: 'Apple Watch',
-    categoría: 'Accesorios',
+    categoría: 'Auriculares',
   },
 
   {
     id: 15,
-    nombre: 'Apple Watch',
+    nombre: 'RAZER BLACKSHARK V2 X USB',
     descripcion: 'Descripción del producto',
     precio: 400,
     imagen: 'fotos/Productos/auris3.jpg',
     alt: 'Apple Watch',
-    categoría: 'Accesorios',
+    categoría: 'Auriculares',
   },
 
   {
     id: 16,
-    nombre: 'Apple Watch',
+    nombre: 'RAZER BLACKSHARK V2 X',
     descripcion: 'Descripción del producto',
     precio: 400,
     imagen: 'fotos/Productos/auris4.jpg',
     alt: 'Apple Watch',
-    categoría: 'Accesorios',
+    categoría: 'Auriculares',
   },
 ];
 
