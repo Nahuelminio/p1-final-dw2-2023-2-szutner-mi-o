@@ -44,29 +44,29 @@ let productos = [
   },
   {
     id: 5,
-    nombre: 'Macbook pro ',
+    nombre: 'Razer Cobra Pro',
     descripcion: 'Descripción del producto',
     precio: 2000,
-    imagen: 'fotos/Productos/mouse1.jpg',
+    imagen: 'fotos/Productos/mouse1.png',
     alt: 'Macbook pro',
     categoría: 'Laptops',
   },
   {
     id: 6,
-    nombre: 'Apple Watch',
+    nombre: 'Razer Viper 8KHz',
     descripcion: 'Descripción del producto',
     precio: 400,
-    imagen: 'fotos/Productos/mouse2.webp',
+    imagen: 'fotos/Productos/mouse2.png',
     alt: 'Apple Watch',
     categoría: 'Accesorios',
   },
 
   {
     id: 7,
-    nombre: 'Apple Watch',
+    nombre: 'Razer Basilisk V3 X HyperSpeed',
     descripcion: 'Descripción del producto',
     precio: 400,
-    imagen: 'fotos/Productos/mouse3.jpeg',
+    imagen: 'fotos/Productos/mouse3.png',
     alt: 'Apple Watch',
     categoría: 'Accesorios',
   },
@@ -76,7 +76,87 @@ let productos = [
     nombre: 'Apple Watch',
     descripcion: 'Descripción del producto',
     precio: 400,
-    imagen: 'fotos/Productos/mouse4.jpg',
+    imagen: 'fotos/Productos/mouse4.png',
+    alt: 'Apple Watch',
+    categoría: 'Accesorios',
+  },
+
+  {
+    id: 9,
+    nombre: 'Apple Watch',
+    descripcion: 'Descripción del producto',
+    precio: 400,
+    imagen: 'fotos/Productos/pad1.png',
+    alt: 'Apple Watch',
+    categoría: 'Accesorios',
+  },
+
+  {
+    id: 10,
+    nombre: 'Apple Watch',
+    descripcion: 'Descripción del producto',
+    precio: 400,
+    imagen: 'fotos/Productos/pad2.png',
+    alt: 'Apple Watch',
+    categoría: 'Accesorios',
+  },
+
+  {
+    id: 11,
+    nombre: 'Apple Watch',
+    descripcion: 'Descripción del producto',
+    precio: 400,
+    imagen: 'fotos/Productos/pad3.png',
+    alt: 'Apple Watch',
+    categoría: 'Accesorios',
+  },
+
+  {
+    id: 12,
+    nombre: 'Apple Watch',
+    descripcion: 'Descripción del producto',
+    precio: 400,
+    imagen: 'fotos/Productos/pad4.png',
+    alt: 'Apple Watch',
+    categoría: 'Accesorios',
+  },
+
+  {
+    id: 13,
+    nombre: 'Apple Watch',
+    descripcion: 'Descripción del producto',
+    precio: 400,
+    imagen: 'fotos/Productos/auris1.jpg',
+    alt: 'Apple Watch',
+    categoría: 'Accesorios',
+  },
+
+  {
+    id: 14,
+    nombre: 'Apple Watch',
+    descripcion: 'Descripción del producto',
+    precio: 400,
+    imagen: 'fotos/Productos/auris2.webp',
+    alt: 'Apple Watch',
+    categoría: 'Accesorios',
+  },
+
+  {
+    id: 15,
+    nombre: 'Apple Watch',
+    descripcion: 'Descripción del producto',
+    precio: 400,
+    imagen: 'fotos/Productos/auris3.jpg',
+    alt: 'Apple Watch',
+    categoría: 'Accesorios',
+  },
+
+  {
+    id: 16,
+    nombre: 'Apple Watch',
+    descripcion: 'Descripción del producto',
+    precio: 400,
+    imagen: 'fotos/Productos/auris4.jpg',
     alt: 'Apple Watch',
     categoría: 'Accesorios',
   },
@@ -110,7 +190,7 @@ let acumulador = 0;
 let lista1 = crearEtiqueta('ul', { id: 'productos' });
 document.querySelector('main').appendChild(lista1);
 
-for (let i = 0; i < 8; i++) {
+for (let i = 0; i < 16; i++) {
   let li = crearEtiqueta('li', { id: productos[i].id });
   document.getElementById('productos').appendChild(li);
 
