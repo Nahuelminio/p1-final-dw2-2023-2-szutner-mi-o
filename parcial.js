@@ -190,64 +190,68 @@ let acumulador = 0;
 let lista1 = crearEtiqueta('ul', { id: 'productos' });
 document.querySelector('main').appendChild(lista1);
 
-for (let i = 0; i < 16; i++) {
-  let li = crearEtiqueta('li', { id: productos[i].id });
-  document.getElementById('productos').appendChild(li);
+let creacionUi = function (valor1 = 0, valor2 = 0) {
+  for (let i = valor1; i < valor2; i++) {
+    let li = crearEtiqueta('li', { id: productos[i].id });
+    document.getElementById('productos').appendChild(li);
 
-  let imagen = crearEtiqueta('img', {
-    src: productos[i].imagen,
-    alt: productos[i].alt,
-    class: 'imagenesAdd',
-  });
-  lista1.lastElementChild.appendChild(imagen);
+    let imagen = crearEtiqueta('img', {
+      src: productos[i].imagen,
+      alt: productos[i].alt,
+      class: 'imagenesAdd',
+    });
+    lista1.lastElementChild.appendChild(imagen);
 
-  let div = crearEtiqueta('div', {});
-  div.classList.add('div-producto');
-  lista1.lastElementChild.append(div);
+    let div = crearEtiqueta('div', {});
+    div.classList.add('div-producto');
+    lista1.lastElementChild.append(div);
 
-  let titulo1 = crearEtiqueta('h3', {}, productos[i].nombre);
-  li.lastElementChild.append(titulo1);
+    let titulo1 = crearEtiqueta('h3', {}, productos[i].nombre);
+    li.lastElementChild.append(titulo1);
 
-  let parrafos1 = crearEtiqueta('p', {}, productos[i].descripcion);
-  li.lastElementChild.append(parrafos1);
+    let parrafos1 = crearEtiqueta('p', {}, productos[i].descripcion);
+    li.lastElementChild.append(parrafos1);
 
-  let parrafos2 = crearEtiqueta('p', {}, `$${productos[i].precio}`);
-  li.lastElementChild.append(parrafos2);
+    let parrafos2 = crearEtiqueta('p', {}, `$${productos[i].precio}`);
+    li.lastElementChild.append(parrafos2);
 
-  let parrafos3 = crearEtiqueta(
-    'p',
-    {},
-    `Categoria: ${productos[i].categoría}`
-  );
-  li.lastElementChild.append(parrafos3);
-
-  let boton = crearEtiqueta('button', {}, 'Agregar');
-  boton.classList.add('button-producto');
-  li.lastElementChild.append(boton);
-
-  //Evento Agregar Items
-  boton.addEventListener('click', () => {
-    acumulador += productos[i].precio;
-    acumulado.innerText = '';
-    acumulado.innerText += acumulador;
-    contador++;
-    minicarrito.innerText = contador;
-    carritoArray.push(productos[i].id);
-  });
-
-  //Evento Actival modal
-  imagen.addEventListener('click', () => {
-    modalCreator(
-      imagen.src,
-      imagen.alt,
-      titulo1.innerText,
-      parrafos1.innerText,
-      parrafos2.innerText,
-      parrafos3.innerText,
-      boton
+    let parrafos3 = crearEtiqueta(
+      'p',
+      {},
+      `Categoria: ${productos[i].categoría}`
     );
-  });
-}
+    li.lastElementChild.append(parrafos3);
+
+    let boton = crearEtiqueta('button', {}, 'Agregar');
+    boton.classList.add('button-producto');
+    li.lastElementChild.append(boton);
+
+    //Evento Agregar Items
+    boton.addEventListener('click', () => {
+      acumulador += productos[i].precio;
+      acumulado.innerText = '';
+      acumulado.innerText += acumulador;
+      contador++;
+      minicarrito.innerText = contador;
+      carritoArray.push(productos[i].id);
+    });
+
+    //Evento Actival modal
+    imagen.addEventListener('click', () => {
+      modalCreator(
+        imagen.src,
+        imagen.alt,
+        titulo1.innerText,
+        parrafos1.innerText,
+        parrafos2.innerText,
+        parrafos3.innerText,
+        boton
+      );
+    });
+  }
+};
+
+creacionUi(0, 16);
 
 const modalCreator = (imgSrc, ImgAlt, h3, descripcion, precio, categoria) => {
   let modal = crearEtiqueta('div', { class: 'modal', id: 'modalProducto' });
@@ -363,3 +367,11 @@ const modalCarrito = () => {
     items.append(precio);
   }
 };
+
+document.getElementById('teclados').addEventListener('click', () => {
+  for (let i = 1; i < 17; i++) {
+    document.getElementById(`${i}`).remove();
+  }
+
+  creacionUi(0, 4);
+});
