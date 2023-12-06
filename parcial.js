@@ -369,9 +369,31 @@ const modalCarrito = () => {
 };
 
 document.getElementById('teclados').addEventListener('click', () => {
-  for (let i = 1; i < 17; i++) {
-    document.getElementById(`${i}`).remove();
-  }
-
+  eliminarElementos();
   creacionUi(0, 4);
 });
+
+document.getElementById('ratones').addEventListener('click', () => {
+  eliminarElementos();
+  creacionUi(4, 8);
+});
+
+document.getElementById('alfombrillas').addEventListener('click', () => {
+  eliminarElementos();
+  creacionUi(8, 12);
+});
+
+document.getElementById('auriculares').addEventListener('click', () => {
+  eliminarElementos();
+  creacionUi(12, 16);
+});
+
+let eliminarElementos = function () {
+  for (let i = 1; i < 17; i++) {
+    let elemento = document.getElementById(`${i}`);
+    if (elemento) {
+      elemento.remove();
+      console.log(`${i} eliminado`);
+    }
+  }
+};
