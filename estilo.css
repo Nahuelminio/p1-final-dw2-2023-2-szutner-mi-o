@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-@import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap");
 
 /*-------------------------------------------------- General */
 * {
@@ -15,10 +15,10 @@ body {
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   display: grid;
   grid-template-rows: auto auto 1fr auto auto;
-  grid-template-areas: 'smt1' 'hdr' 'mn' 'ftr' 'smt2';
+  grid-template-areas: "smt1" "hdr" "mn" "ftr" "smt2";
   background-color: #fbfbfb;
   color: #333333;
 }
@@ -180,23 +180,6 @@ footer {
   grid-area: ftr;
 }
 
-footer ul {
-  border-top: 1px solid rgba(34, 34, 34, 0.15);
-  padding: 1rem 0 1.5rem 0;
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-}
-
-footer li {
-  font-size: 0.8rem;
-  line-height: 1.6em;
-  color: rgba(51, 51, 51, 0.8);
-  margin-bottom: 0;
-}
-
 /*-------------------------------------------------- Forms */
 label {
   margin-bottom: 1rem;
@@ -227,6 +210,9 @@ header div {
   font-weight: bold;
   text-decoration: none;
 }
+.filtos a:hover {
+  color: #50c220 !important;
+}
 #minicarrito p {
   display: flex;
   align-items: center;
@@ -237,6 +223,7 @@ header div {
 
   background-color: rgb(255, 255, 255);
 }
+
 #minicarrito p span {
   text-align: center;
 }
@@ -256,6 +243,7 @@ div h3 {
   margin-left: 10px;
   color: white;
   font-weight: 300;
+  height: 2.5em;
 }
 div p {
   text-align: left;
@@ -281,6 +269,9 @@ div p {
 }
 
 #productos > li {
+  -webkit-box-shadow: 10px 10px 10px -4px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 10px -4px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 10px 10px -4px rgba(0, 0, 0, 0.75);
   width: 22%;
   text-align: center;
   background-color: #141414;
@@ -316,7 +307,7 @@ div p {
   align-items: center;
   height: fit-content;
   padding: 1rem;
-  min-width: 400px;
+  min-width: 550px;
 }
 
 .modal a {
@@ -334,18 +325,18 @@ div p {
   top: 1em;
   right: 1em;
   border-radius: 2.5em;
-  width: 5em;
-  height: 5em;
+  width: 2em;
+  height: 2em;
   background-color: rgba(255, 255, 255, 0.9);
   font-size: 1em;
   font-weight: 400;
   text-align: center;
-  color: #ff8c00;
+  color: #1bb600;
   text-decoration: none;
 }
 
 .modal a.cerrar:hover {
-  background-color: #ff8c00;
+  background-color: #1bb600;
   color: rgba(255, 255, 255, 0.9);
 }
 
@@ -356,11 +347,7 @@ div p {
 
 .modal h3,
 .modal p,
-.modal li {
-  margin: 0;
-  text-align: center;
-  /*color: #d0e0e3;*/
-}
+
 
 .modal li {
   display: flex;
@@ -402,4 +389,55 @@ div p {
   footer ul {
     flex-direction: row;
   }
+}
+
+.modalProducto div {
+  border: 2px solid rgb(2, 211, 2);
+  border-radius: 5px;
+  background-color: #141414 !important;
+}
+.modalProducto div p {
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  margin-bottom: 1em;
+}
+
+.modalProducto div img {
+  padding: 1em;
+  margin-bottom: 0.5em;
+}
+
+
+/*Carrito*/
+.carrito-imagen{
+  width: 5em;
+}
+.div-carrito{
+  background-color: #20232e !important;
+}
+.li-carrito{
+  display:flex !important;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center !important;
+
+}
+.li-carrito li{
+  width: 30em;
+  border: 1px solid rgb(214, 214, 214);
+  padding: 1em;
+  display: flex;
+  flex-direction: row;
+  border-radius: 7px;
+  align-items: center;
+ 
+}
+.li-carrito li h3{
+  width: 15em;
+  align-items: start;
+  text-align: start;
+
+}
+h4{
+  color: white;
 }
