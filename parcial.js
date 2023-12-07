@@ -259,5 +259,6 @@ const modalCarrito = () => {
       }`
     );
     items.append(precio);
+    
   }
 };
