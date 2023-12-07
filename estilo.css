@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-@import url("https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap');
 
 /*-------------------------------------------------- General */
 * {
@@ -15,10 +15,10 @@ body {
 }
 
 body {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   display: grid;
   grid-template-rows: auto auto 1fr auto auto;
-  grid-template-areas: "smt1" "hdr" "mn" "ftr" "smt2";
+  grid-template-areas: 'smt1' 'hdr' 'mn' 'ftr' 'smt2';
   background-color: #fbfbfb;
   color: #333333;
 }
@@ -71,7 +71,6 @@ li {
 
 /*-------------------------------------------------- Button */
 .button-producto {
- 
   margin: 5px;
   width: 120px;
   background: #333;
@@ -145,8 +144,6 @@ hr {
   margin-bottom: 1rem;
   border-color: rgba(51, 51, 51, 0.2);
 }
-
-
 
 /*-------------------------------------------------- Clases */
 .mt-1 {
@@ -254,22 +251,21 @@ header div {
 }
 
 /*-------------------------------------------------- Gallery */
-div h3{
-    text-align: left;
-    margin-left: 10px;
-    color: white;
-    font-weight: 300;
-   
+div h3 {
+  text-align: left;
+  margin-left: 10px;
+  color: white;
+  font-weight: 300;
 }
-div p{
-      text-align: left;
-    margin-left: 10px;
-    color: rgb(150, 150, 150);
-    font-size: small;
+div p {
+  text-align: left;
+  margin-left: 10px;
+  color: rgb(150, 150, 150);
+  font-size: small;
 }
-.div-producto{
-    border-bottom: 2px solid   #9DFF06  ;
-      padding: 1rem 0;
+.div-producto {
+  border-bottom: 2px solid #9dff06;
+  padding: 1rem 0;
 }
 
 /*----------- Carrito*/

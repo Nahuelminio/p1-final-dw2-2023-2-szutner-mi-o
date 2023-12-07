@@ -8,57 +8,157 @@ let carritoArray = [];
 let productos = [
   {
     id: 1,
-    nombre: "RAZER HUNTSMAN V3 PRO",
-    descripcion: "Teclado óptico analógico para esports",
+    nombre: 'RAZER HUNTSMAN V3 PRO',
+    descripcion: 'Teclado óptico analógico para esports',
     precio: 500,
-    imagen: "fotos/teclado1.webp",
-    alt: "Iphone 12",
-    categoría: "Celulares",
+    imagen: 'fotos/Productos/teclado1.webp',
+    alt: 'Iphone 12',
+    categoría: 'Teclados',
   },
   {
     id: 2,
-    nombre: "RAZER TENKEYLESS",
-    descripcion: "Teclado óptico analógico para esports ",
+    nombre: 'RAZER TENKEYLESS',
+    descripcion: 'Teclado óptico analógico para esports ',
     precio: 1000,
-    imagen: "fotos/teclado2.webp",
-    alt: "Macbook air",
-    categoría: "Laptop",
+    imagen: 'fotos/Productos/teclado2.webp',
+    alt: 'Macbook air',
+    categoría: 'Teclados',
   },
   {
     id: 3,
-    nombre: "RAZER HUNTSMAN V3 PRO ",
-    descripcion: "Teclado óptico analógico para esports 60%",
+    nombre: 'RAZER HUNTSMAN V3 PRO ',
+    descripcion: 'Teclado óptico analógico para esports 60%',
     precio: 200,
-    imagen: "fotos/teclado3.webp",
-    alt: "Airpods 3",
-    categoría: "Accesorios",
+    imagen: 'fotos/Productos/teclado3.webp',
+    alt: 'Airpods 3',
+    categoría: 'Teclados',
   },
   {
     id: 4,
-    nombre: "RAZER HUNTSMAN MINI",
-    descripcion: "Teclado para juegos de tamaño 60 % ",
+    nombre: 'RAZER HUNTSMAN MINI',
+    descripcion: 'Teclado para juegos de tamaño 60 % ',
     precio: 1500,
-    imagen: "fotos/teclado4.webp",
-    alt: "Iphone 15 pro max",
-    categoría: "Celulares",
+    imagen: 'fotos/Productos/teclado4.webp',
+    alt: 'Iphone 15 pro max',
+    categoría: 'Teclados',
   },
   {
     id: 5,
-    nombre: "Macbook pro ",
-    descripcion: "Descripción del producto",
+    nombre: 'Razer Cobra Pro',
+    descripcion: 'Descripción del producto',
     precio: 2000,
-    imagen: "fotos/macbookpro.jpg",
-    alt: "Macbook pro",
-    categoría: "Laptops",
+    imagen: 'fotos/Productos/mouse1.png',
+    alt: 'Macbook pro',
+    categoría: 'Ratones',
   },
   {
     id: 6,
-    nombre: "Apple Watch",
-    descripcion: "Descripción del producto",
+    nombre: 'Razer Viper 8KHz',
+    descripcion: 'Descripción del producto',
     precio: 400,
-    imagen: "fotos/watch.webp",
-    alt: "Apple Watch",
-    categoría: "Accesorios",
+    imagen: 'fotos/Productos/mouse2.png',
+    alt: 'Apple Watch',
+    categoría: 'Ratones',
+  },
+
+  {
+    id: 7,
+    nombre: 'Razer Basilisk V3 X HyperSpeed',
+    descripcion: 'Descripción del producto',
+    precio: 400,
+    imagen: 'fotos/Productos/mouse3.png',
+    alt: 'Apple Watch',
+    categoría: 'Ratones',
+  },
+
+  {
+    id: 8,
+    nombre: 'Apple Watch',
+    descripcion: 'Descripción del producto',
+    precio: 400,
+    imagen: 'fotos/Productos/mouse4.png',
+    alt: 'Apple Watch',
+    categoría: 'Ratones',
+  },
+
+  {
+    id: 9,
+    nombre: 'Razer Atlas - Black',
+    descripcion: 'Descripción del producto',
+    precio: 400,
+    imagen: 'fotos/Productos/pad1.png',
+    alt: 'Apple Watch',
+    categoría: 'Alfombrillas',
+  },
+
+  {
+    id: 10,
+    nombre: 'Razer Atlas - White',
+    descripcion: 'Descripción del producto',
+    precio: 400,
+    imagen: 'fotos/Productos/pad2.png',
+    alt: 'Apple Watch',
+    categoría: 'Alfombrillas',
+  },
+
+  {
+    id: 11,
+    nombre: 'Razer Strider Chroma',
+    descripcion: 'Descripción del producto',
+    precio: 400,
+    imagen: 'fotos/Productos/pad3.png',
+    alt: 'Apple Watch',
+    categoría: 'Alfombrillas',
+  },
+
+  {
+    id: 12,
+    nombre: 'Razer Goliathus Chroma 3XL - Black',
+    descripcion: 'Descripción del producto',
+    precio: 400,
+    imagen: 'fotos/Productos/pad4.png',
+    alt: 'Apple Watch',
+    categoría: 'Alfombrillas',
+  },
+
+  {
+    id: 13,
+    nombre: 'RAZER BLACKSHARK V2 PRO',
+    descripcion: 'Descripción del producto',
+    precio: 400,
+    imagen: 'fotos/Productos/auris1.jpg',
+    alt: 'Apple Watch',
+    categoría: 'Auriculares',
+  },
+
+  {
+    id: 14,
+    nombre: 'RAZER BLACKSHARK V2 HYPERSPEED',
+    descripcion: 'Descripción del producto',
+    precio: 400,
+    imagen: 'fotos/Productos/auris2.webp',
+    alt: 'Apple Watch',
+    categoría: 'Auriculares',
+  },
+
+  {
+    id: 15,
+    nombre: 'RAZER BLACKSHARK V2 X USB',
+    descripcion: 'Descripción del producto',
+    precio: 400,
+    imagen: 'fotos/Productos/auris3.jpg',
+    alt: 'Apple Watch',
+    categoría: 'Auriculares',
+  },
+
+  {
+    id: 16,
+    nombre: 'RAZER BLACKSHARK V2 X',
+    descripcion: 'Descripción del producto',
+    precio: 400,
+    imagen: 'fotos/Productos/auris4.jpg',
+    alt: 'Apple Watch',
+    categoría: 'Auriculares',
   },
 ];
 
@@ -90,62 +190,68 @@ let acumulador = 0;
 let lista1 = crearEtiqueta('ul', { id: 'productos' });
 document.querySelector('main').appendChild(lista1);
 
-for (let i = 0; i < 6; i++) {
-  let li = crearEtiqueta('li', { id: productos[i].id });
-  document.getElementById('productos').appendChild(li);
+let creacionUi = function (valor1 = 0, valor2 = 0) {
+  for (let i = valor1; i < valor2; i++) {
+    let li = crearEtiqueta('li', { id: productos[i].id });
+    document.getElementById('productos').appendChild(li);
 
-  let imagen = crearEtiqueta('img', {
-    src: productos[i].imagen,
-    alt: productos[i].alt,
-    class: 'imagenesAdd',
-  });
-  lista1.lastElementChild.appendChild(imagen);
+    let imagen = crearEtiqueta('img', {
+      src: productos[i].imagen,
+      alt: productos[i].alt,
+      class: 'imagenesAdd',
+    });
+    lista1.lastElementChild.appendChild(imagen);
 
-  let div = crearEtiqueta('div', {});
-   div.classList.add("div-producto");
-  lista1.lastElementChild.append(div);
+    let div = crearEtiqueta('div', {});
+    div.classList.add('div-producto');
+    lista1.lastElementChild.append(div);
 
-  let titulo1 = crearEtiqueta('h3', {}, productos[i].nombre);
-  li.lastElementChild.append(titulo1);
+    let titulo1 = crearEtiqueta('h3', {}, productos[i].nombre);
+    li.lastElementChild.append(titulo1);
 
-  let parrafos1 = crearEtiqueta('p', {}, productos[i].descripcion);
-  li.lastElementChild.append(parrafos1);
+    let parrafos1 = crearEtiqueta('p', {}, productos[i].descripcion);
+    li.lastElementChild.append(parrafos1);
 
-  let parrafos2 = crearEtiqueta("p", {}, `$${ productos[i].precio}`);
-  li.lastElementChild.append(parrafos2);
+    let parrafos2 = crearEtiqueta('p', {}, `$${productos[i].precio}`);
+    li.lastElementChild.append(parrafos2);
 
-  let parrafos3 = crearEtiqueta("p", {}, `Categoria: ${productos[i].categoría}`);
-  li.lastElementChild.append(parrafos3);
-
-  let boton = crearEtiqueta('button', {}, 'Agregar');
-  boton.classList.add("button-producto");
-  li.lastElementChild.append(boton);
-
-  //Evento Agregar Items
-  boton.addEventListener('click', () => {
-   
-   
-    acumulador += productos[i].precio;
-    acumulado.innerText = '';
-    acumulado.innerText += acumulador;
-     contador++;
-    minicarrito.innerText = contador;
-    carritoArray.push(productos[i].id);
-  });
-
-  //Evento Actival modal
-  imagen.addEventListener('click', () => {
-    modalCreator(
-      imagen.src,
-      imagen.alt,
-      titulo1.innerText,
-      parrafos1.innerText,
-      parrafos2.innerText,
-      parrafos3.innerText,
-      boton
+    let parrafos3 = crearEtiqueta(
+      'p',
+      {},
+      `Categoria: ${productos[i].categoría}`
     );
-  });
-}
+    li.lastElementChild.append(parrafos3);
+
+    let boton = crearEtiqueta('button', {}, 'Agregar');
+    boton.classList.add('button-producto');
+    li.lastElementChild.append(boton);
+
+    //Evento Agregar Items
+    boton.addEventListener('click', () => {
+      acumulador += productos[i].precio;
+      acumulado.innerText = '';
+      acumulado.innerText += acumulador;
+      contador++;
+      minicarrito.innerText = contador;
+      carritoArray.push(productos[i].id);
+    });
+
+    //Evento Actival modal
+    imagen.addEventListener('click', () => {
+      modalCreator(
+        imagen.src,
+        imagen.alt,
+        titulo1.innerText,
+        parrafos1.innerText,
+        parrafos2.innerText,
+        parrafos3.innerText,
+        boton
+      );
+    });
+  }
+};
+
+creacionUi(0, 16);
 
 const modalCreator = (imgSrc, ImgAlt, h3, descripcion, precio, categoria) => {
   let modal = crearEtiqueta('div', { class: 'modal', id: 'modalProducto' });
@@ -260,5 +366,35 @@ const modalCarrito = () => {
     );
     items.append(precio);
     
+  }
+};
+
+document.getElementById('teclados').addEventListener('click', () => {
+  eliminarElementos();
+  creacionUi(0, 4);
+});
+
+document.getElementById('ratones').addEventListener('click', () => {
+  eliminarElementos();
+  creacionUi(4, 8);
+});
+
+document.getElementById('alfombrillas').addEventListener('click', () => {
+  eliminarElementos();
+  creacionUi(8, 12);
+});
+
+document.getElementById('auriculares').addEventListener('click', () => {
+  eliminarElementos();
+  creacionUi(12, 16);
+});
+
+let eliminarElementos = function () {
+  for (let i = 1; i < 17; i++) {
+    let elemento = document.getElementById(`${i}`);
+    if (elemento) {
+      elemento.remove();
+      console.log(`${i} eliminado`);
+    }
   }
 };
