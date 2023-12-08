@@ -351,8 +351,6 @@ const modalCarrito = () => {
   let p = crearEtiqueta("p", {}, `items: ${contador} - Total ${acumulador}`);
   div1.appendChild(p);
 
-
-
   let lista = crearEtiqueta("ul", {}, "");
   div1.append(lista);
   lista.classList.add("li-carrito");
@@ -373,7 +371,6 @@ const modalCarrito = () => {
 
     let nombre = crearEtiqueta("h3", {}, producto.nombre);
     items.appendChild(nombre);
-  
 
     let precio = crearEtiqueta("p", {}, `$${producto.precio}`);
     items.appendChild(precio);
@@ -381,33 +378,34 @@ const modalCarrito = () => {
   if (carritoArray.length > 0) {
     let buttonCheckout = crearEtiqueta("button", {}, `Pagar: ${acumulador}`);
     div1.appendChild(buttonCheckout);
-  }else{
+  } else {
     let h4 = crearEtiqueta("h4", {}, "Tu carrito esta vacío!");
-    div1.appendChild(h4)
+    div1.appendChild(h4);
   }
-  
-
-   
 };
 
 document.getElementById("teclados").addEventListener("click", () => {
   eliminarElementos();
   creacionUi(0, 4);
+  anuncio();
 });
 
 document.getElementById("ratones").addEventListener("click", () => {
   eliminarElementos();
   creacionUi(4, 8);
+  anuncio();
 });
 
 document.getElementById("alfombrillas").addEventListener("click", () => {
   eliminarElementos();
   creacionUi(8, 12);
+  anuncio();
 });
 
 document.getElementById("auriculares").addEventListener("click", () => {
   eliminarElementos();
   creacionUi(12, 16);
+  anuncio();
 });
 
 let eliminarElementos = function () {
@@ -415,7 +413,35 @@ let eliminarElementos = function () {
     let elemento = document.getElementById(`${i}`);
     if (elemento) {
       elemento.remove();
-      console.log(`${i} eliminado`);
     }
   }
+};
+
+function anuncio() {
+  randomNumber();
+  crearAnuncio();
+  setTimeout(eliminarAnuncio, 2000);
+}
+
+let randomNumber = function () {
+  return Math.floor(Math.random() * 4 + 1);
+};
+
+const crearAnuncio = () => {
+  let divAnuncio = crearEtiqueta(
+    "div",
+    { id: "divAnuncio", class: "modalAnuncio" },
+    ""
+  );
+  document.querySelector("main").appendChild(divAnuncio);
+
+  let anuncio = crearEtiqueta("img", {
+    src: `fotos/Anuncios/anuncio${randomNumber()}.jpg`,
+    id: "anuncio",
+  });
+  document.getElementById("divAnuncio").appendChild(anuncio);
+};
+
+const eliminarAnuncio = () => {
+  document.getElementById("divAnuncio").remove();
 };

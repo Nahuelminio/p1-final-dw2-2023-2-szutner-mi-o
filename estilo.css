@@ -347,8 +347,6 @@ div p {
 
 .modal h3,
 .modal p,
-
-
 .modal li {
   display: flex;
   justify-content: space-around;
@@ -407,22 +405,20 @@ div p {
   margin-bottom: 0.5em;
 }
 
-
 /*Carrito*/
-.carrito-imagen{
+.carrito-imagen {
   width: 5em;
 }
-.div-carrito{
+.div-carrito {
   background-color: #20232e !important;
 }
-.li-carrito{
-  display:flex !important;
+.li-carrito {
+  display: flex !important;
   flex-direction: column;
   justify-content: space-around;
   align-items: center !important;
-
 }
-.li-carrito li{
+.li-carrito li {
   width: 30em;
   border: 1px solid rgb(214, 214, 214);
   padding: 1em;
@@ -430,14 +426,28 @@ div p {
   flex-direction: row;
   border-radius: 7px;
   align-items: center;
- 
 }
-.li-carrito li h3{
+.li-carrito li h3 {
   width: 15em;
   align-items: start;
   text-align: start;
-
 }
-h4{
+h4 {
   color: white;
+}
+
+.modalAnuncio {
+  position: fixed;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  overflow: auto;
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.9);
 }
