@@ -408,7 +408,7 @@ const modalCarrito = () => {
       }
     });
   }
-  let p = crearEtiqueta("p", {}, `items: ${contador} - Total ${acumulador}`);
+  let p = crearEtiqueta("p", { class:"contador"}, `items: ${contador} - Total ${acumulador}`);
   div1.appendChild(p);
 
   if (carritoArray.length > 0) {

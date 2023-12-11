@@ -9,65 +9,12 @@
   box-sizing: border-box;
 }
 
-html,
-body {
-  height: 100%;
-}
-
 body {
   font-family: "Montserrat", sans-serif;
-  display: grid;
-  grid-template-rows: auto auto 1fr auto auto;
-  grid-template-areas: "smt1" "hdr" "mn" "ftr" "smt2";
-  background-color: #fbfbfb;
-  color: #333333;
+ 
 }
 
-/*-------------------------------------------------- Classes */
-.d-block {
-  display: block;
-}
 
-.mb-1 {
-  margin-bottom: 1rem;
-}
-.mt-1 {
-  margin-top: 1rem;
-}
-.ml-1 {
-  margin-left: 1rem;
-}
-.mr-1 {
-  margin-right: 1rem;
-}
-
-/*-------------------------------------------------- Text */
-h1,
-h2,
-h3,
-p {
-  line-height: 1.6em;
-  margin-bottom: 1em;
-}
-
-a {
-  color: #3b60e4;
-  transition: color 300ms ease-in-out;
-}
-
-a:hover,
-a:focus {
-  color: #384e77;
-}
-
-/*-------------------------------------------------- List */
-ul {
-  padding-left: 3rem;
-}
-
-li {
-  margin-bottom: 1rem;
-}
 
 /*-------------------------------------------------- Button */
 .button-producto {
@@ -130,27 +77,7 @@ button {
   transition: opacity 300ms ease-in-out;
 }
 
-button:hover,
-button:focus {
-  opacity: 0.6;
-}
 
-button:hover {
-  cursor: pointer;
-}
-
-/*-------------------------------------------------- Container */
-hr {
-  margin-bottom: 1rem;
-  border-color: rgba(51, 51, 51, 0.2);
-}
-
-/*-------------------------------------------------- Clases */
-.mt-1 {
-  margin-top: 1rem;
-}
-
-/*-------------------------------------------------- Header */
 header {
   height: 4.5em;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
@@ -186,16 +113,6 @@ label {
   margin-bottom: 1rem;
   display: inline-block;
 }
-
-input {
-  display: block;
-  max-width: 300px;
-  width: 100%;
-  padding: 0.5rem 1rem;
-  border: 1px solid rgba(51, 51, 51, 0.5);
-  border-radius: 6px;
-  color: #333333;
-}
 .logo {
   width: 3em;
 }
@@ -219,14 +136,15 @@ header div {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  width: 1.7em;
-  height: 1.7em;
-
+  width: 1.5em;
+  height: 1.5em;
+  margin-bottom: 17px;
   background-color: rgb(255, 255, 255);
 }
 
 #minicarrito p span {
   text-align: center;
+  font-size: 0.8em;
 }
 .button-carrito {
   background-color: transparent;
@@ -246,15 +164,18 @@ div h3 {
   font-weight: 300;
   height: 2.5em;
 }
-div p {
-  text-align: left;
-  margin-left: 10px;
-  color: rgb(150, 150, 150);
-  font-size: small;
-}
+
 .div-producto {
   border-bottom: 2px solid #9dff06;
   padding: 1rem 0;
+
+}
+.div-producto p {
+  margin-bottom: 1em;
+   text-align: left;
+  margin-left: 10px;
+  color: rgb(150, 150, 150);
+  font-size: small;
 }
 
 /*----------- Carrito*/
@@ -276,6 +197,7 @@ div p {
   width: 22%;
   text-align: center;
   background-color: #141414;
+  margin-bottom: 1em;
 }
 
 #productos > li > img {
@@ -419,8 +341,18 @@ div p {
   justify-content: space-around;
   align-items: center !important;
 }
+li p{
+  color: white;
+  
+}
+.contador{
+  color: white;
+  font-size: medium;
+
+  padding-bottom: 0.5em;
+}
 .li-carrito li {
-  width: 35em;
+  width: 37em;
   border: 1px solid rgb(214, 214, 214);
   padding: 1em;
   display: flex;
