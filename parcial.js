@@ -202,8 +202,8 @@ let creacionUi = function (valor1 = 0, valor2 = 0) {
     });
     lista1.lastElementChild.appendChild(imagen);
 
-    let div = crearEtiqueta("div", {});
-    div.classList.add("div-producto");
+    let div = crearEtiqueta("div", { class: "div-producto" });
+
     lista1.lastElementChild.append(div);
 
     let titulo1 = crearEtiqueta("h3", {}, productos[i].nombre);
@@ -222,8 +222,11 @@ let creacionUi = function (valor1 = 0, valor2 = 0) {
     );
     li.lastElementChild.append(parrafos3);
 
-    let boton = crearEtiqueta("button", {}, "Agregar");
-    boton.classList.add("button-producto");
+    let boton = crearEtiqueta(
+      "button",
+      { class: "button-producto" },
+      "Agregar"
+    );
     li.lastElementChild.append(boton);
 
     //Evento Agregar Items
@@ -334,9 +337,8 @@ const modalCarrito = () => {
   });
   document.querySelector("main").appendChild(divContenedor);
 
-  let div1 = crearEtiqueta("div", {});
+  let div1 = crearEtiqueta("div", { class: "div-carrito" });
   divContenedor.appendChild(div1);
-  div1.classList.add("div-carrito");
 
   let a = crearEtiqueta(
     "a",
@@ -348,12 +350,8 @@ const modalCarrito = () => {
     divContenedor.remove();
   });
 
-  let p = crearEtiqueta("p", {}, `items: ${contador} - Total ${acumulador}`);
-  div1.appendChild(p);
-
-  let lista = crearEtiqueta("ul", {}, "");
+  let lista = crearEtiqueta("ul", { class: "li-carrito" }, "");
   div1.append(lista);
-  lista.classList.add("li-carrito");
 
   for (let i = 0; i < carritoArray.length; i++) {
     let productoId = carritoArray[i];
@@ -374,10 +372,89 @@ const modalCarrito = () => {
 
     let precio = crearEtiqueta("p", {}, `$${producto.precio}`);
     items.appendChild(precio);
+
+    let eliminarProducto = crearEtiqueta(
+      "button",
+      { class: "button-eliminar" },
+      "Eliminar"
+    );
+    items.appendChild(eliminarProducto);
+    eliminarProducto.addEventListener("click", () => {
+      // Obtener el índice del producto en el array del carrito
+      const index = carritoArray.indexOf(producto.id);
+
+      // Verificar si el producto está en el carrito antes de intentar eliminarlo
+      if (index !== -1) {
+        // Obtener el producto que se va a eliminar
+        const productoEliminado = productos.find((p) => p.id === producto.id);
+
+        // Eliminar el producto del array del carrito
+        carritoArray.splice(index, 1);
+
+        // Actualizar los contadores y la visualización en la interfaz
+        contador--;
+        minicarrito.innerText = contador;
+        acumulador = acumulador - Number(productoEliminado.precio);
+        acumulado.innerText = acumulador;
+
+        // Eliminar el elemento del producto en la interfaz
+        items.remove();
+
+        // Verificar si después de la eliminación el carrito está vacío
+        if (carritoArray.length === 0) {
+          // Eliminar el modal del carrito si está vacío
+          divContenedor.remove();
+        }
+      }
+    });
   }
+  let p = crearEtiqueta("p", {}, `items: ${contador} - Total ${acumulador}`);
+  div1.appendChild(p);
+
   if (carritoArray.length > 0) {
-    let buttonCheckout = crearEtiqueta("button", {}, `Pagar: ${acumulador}`);
+    let buttonCheckout = crearEtiqueta(
+      "button",
+      {
+        title: "Eliminar Producto",
+        class: "button-producto",
+      },
+      `Pagar: ${acumulador}`
+    );
     div1.appendChild(buttonCheckout);
+    let buttonVaciar = crearEtiqueta(
+      "button",
+      { class: "buttonVaciar" },
+      "Vaciar carrito"
+    );
+    div1.appendChild(buttonVaciar);
+
+    buttonVaciar.addEventListener("click", () => {
+      const mensaje = "¿Estás seguro que quieres vaciar tu carrito?";
+      const confirmacion = confirm(mensaje);
+      if (confirmacion) {
+        // Vaciar el array del carrito
+
+        carritoArray = [];
+
+        // Reiniciar contadores
+
+        contador = 0;
+        acumulador = 0;
+
+        // Actualizar las visualizaciones en la interfaz
+
+        minicarrito.innerText = contador;
+        acumulado.innerText = acumulador;
+
+        // Eliminar elementos del carrito en la interfaz
+
+        let divCarrito = document.getElementById("modalCarrito");
+
+        if (divCarrito) {
+          divCarrito.remove();
+        }
+      }
+    });
   } else {
     let h4 = crearEtiqueta("h4", {}, "Tu carrito esta vacío!");
     div1.appendChild(h4);
