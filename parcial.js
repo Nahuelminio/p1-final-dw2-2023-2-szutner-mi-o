@@ -429,9 +429,7 @@ const modalCarrito = () => {
     div1.appendChild(buttonVaciar);
 
     buttonVaciar.addEventListener("click", () => {
-      const mensaje = "¿Estás seguro que quieres vaciar tu carrito?";
-      const confirmacion = confirm(mensaje);
-      if (confirmacion) {
+     
         // Vaciar el array del carrito
 
         carritoArray = [];
@@ -453,7 +451,7 @@ const modalCarrito = () => {
         if (divCarrito) {
           divCarrito.remove();
         }
-      }
+      
     });
   } else {
     let h4 = crearEtiqueta("h4", {}, "Tu carrito esta vacío!");
