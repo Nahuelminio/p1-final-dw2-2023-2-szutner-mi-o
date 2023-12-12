@@ -513,7 +513,7 @@ const crearAnuncio = () => {
   document.querySelector("main").appendChild(divAnuncio);
 
   let anuncio = crearEtiqueta("img", {
-    src: `fotos/Anuncios/anuncio${randomNumber()}.jpg`,
+    src: `fotos/Anuncios/anuncio${randomNumber()}.png`,
     id: "anuncio",
   });
   document.getElementById("divAnuncio").appendChild(anuncio);
