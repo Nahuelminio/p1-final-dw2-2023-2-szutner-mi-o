@@ -497,7 +497,7 @@ let eliminarElementos = function () {
 function anuncio() {
   randomNumber();
   crearAnuncio();
-  setTimeout(eliminarAnuncio, 2000);
+  setTimeout(eliminarAnuncio, 10000);
 }
 
 let randomNumber = function () {
@@ -510,15 +510,23 @@ const crearAnuncio = () => {
     { id: "divAnuncio", class: "modalAnuncio" },
     ""
   );
-  document.querySelector("main").appendChild(divAnuncio);
 
   let anuncio = crearEtiqueta("img", {
     src: `fotos/Anuncios/anuncio${randomNumber()}.png`,
     id: "anuncio",
+    class: "anuncioImg",
   });
-  document.getElementById("divAnuncio").appendChild(anuncio);
+
+  divAnuncio.appendChild(anuncio);
+  document.querySelector("main").appendChild(divAnuncio);
 };
 
 const eliminarAnuncio = () => {
   document.getElementById("divAnuncio").remove();
 };
+
+document.addEventListener("click", function (event) {
+  if (event.target.classList.contains("modalAnuncio")) {
+    event.target.remove();
+  }
+});

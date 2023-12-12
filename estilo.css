@@ -424,3 +424,7 @@ h4 {
   background-color: transparent;
   border: 1px solid red;
 }
+
+.anuncioImg {
+  border: 1px solid green;
+}
