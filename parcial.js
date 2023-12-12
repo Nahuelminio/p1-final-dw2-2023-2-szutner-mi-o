@@ -408,7 +408,11 @@ const modalCarrito = () => {
       }
     });
   }
-  let p = crearEtiqueta("p", { class:"contador"}, `items: ${contador} - Total ${acumulador}`);
+  let p = crearEtiqueta(
+    "p",
+    { class: "contador" },
+    `items: ${contador} - Total ${acumulador}`
+  );
   div1.appendChild(p);
 
   if (carritoArray.length > 0) {
@@ -429,29 +433,27 @@ const modalCarrito = () => {
     div1.appendChild(buttonVaciar);
 
     buttonVaciar.addEventListener("click", () => {
-     
-        // Vaciar el array del carrito
+      // Vaciar el array del carrito
 
-        carritoArray = [];
+      carritoArray = [];
 
-        // Reiniciar contadores
+      // Reiniciar contadores
 
-        contador = 0;
-        acumulador = 0;
+      contador = 0;
+      acumulador = 0;
 
-        // Actualizar las visualizaciones en la interfaz
+      // Actualizar las visualizaciones en la interfaz
 
-        minicarrito.innerText = contador;
-        acumulado.innerText = acumulador;
+      minicarrito.innerText = contador;
+      acumulado.innerText = acumulador;
 
-        // Eliminar elementos del carrito en la interfaz
+      // Eliminar elementos del carrito en la interfaz
 
-        let divCarrito = document.getElementById("modalCarrito");
+      let divCarrito = document.getElementById("modalCarrito");
 
-        if (divCarrito) {
-          divCarrito.remove();
-        }
-      
+      if (divCarrito) {
+        divCarrito.remove();
+      }
     });
   } else {
     let h4 = crearEtiqueta("h4", {}, "Tu carrito esta vacío!");
