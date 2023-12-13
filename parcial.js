@@ -530,3 +530,98 @@ document.addEventListener("click", function (event) {
     event.target.remove();
   }
 });
+
+const modalCheckOut = function () {
+  let modalCheck = crearEtiqueta("div", {
+    class: "modal",
+  });
+
+  document.querySelector("main").appendChild(modalCheck);
+
+  let modalContenedor = crearEtiqueta("div", { class: "modalContenedor" });
+  modalCheck.appendChild(modalContenedor);
+
+  let label = crearEtiqueta("label", { class: "labelCheck" }, "Nombre:");
+  modalContenedor.appendChild(label);
+
+  let inputName = crearEtiqueta("input", { type: "text", class: "InputCheck" });
+  modalContenedor.appendChild(inputName);
+
+  let labelTelefono = crearEtiqueta(
+    "label",
+    { class: "labelCheck" },
+    "Telefono:"
+  );
+  modalContenedor.appendChild(labelTelefono);
+
+  let inputTelefono = crearEtiqueta("input", {
+    type: "number",
+    class: "InputCheck",
+  });
+  modalContenedor.appendChild(inputTelefono);
+
+  let labelEmail = crearEtiqueta("label", { class: "labelCheck" }, "Email:");
+  modalContenedor.appendChild(labelEmail);
+
+  let inputEmail = crearEtiqueta("input", {
+    type: "Email",
+    class: "InputCheck",
+  });
+  modalContenedor.appendChild(inputEmail);
+
+  let divCC = crearEtiqueta("div", { class: "divCC" });
+  modalContenedor.appendChild(divCC);
+
+  let divCalle = crearEtiqueta("div", { class: "divCalle" });
+  divCC.appendChild(divCalle);
+
+  let labelCalle = crearEtiqueta("label", { class: "labelCheck" }, "Calle:");
+  divCalle.appendChild(labelCalle);
+
+  let inputCalle = crearEtiqueta("input", {
+    type: "text",
+    class: "InputCheck",
+  });
+  divCalle.appendChild(inputCalle);
+
+  let divPostal = crearEtiqueta("div", { class: "divPostal" });
+  divCC.appendChild(divPostal);
+
+  let labePostal = crearEtiqueta(
+    "label",
+    { class: "labelCheck" },
+    "Codigo Postal:"
+  );
+  divPostal.appendChild(labePostal);
+
+  let inputPostal = crearEtiqueta("input", {
+    type: "Number",
+    class: "InputCheck",
+  });
+  divPostal.appendChild(inputPostal);
+
+  let labeFecha = crearEtiqueta(
+    "label",
+    { class: "labelCheck" },
+    "Fecha de entrega:"
+  );
+  modalContenedor.appendChild(labeFecha);
+
+  let inputFecha = crearEtiqueta("input", {
+    type: "date",
+    class: "InputCheck",
+  });
+  modalContenedor.appendChild(inputFecha);
+
+  let divSubmit = crearEtiqueta("divSubmit", { id: "divSubmit" });
+  modalContenedor.appendChild(divSubmit);
+
+  let submit = crearEtiqueta(
+    "button",
+    { type: "submit", id: "submitButton" },
+    "enviar"
+  );
+  divSubmit.appendChild(submit);
+};
+
+document.getElementById("checkout").addEventListener("click", modalCheckOut);
