@@ -183,6 +183,7 @@ div h3 {
   padding-left: 0;
   width: 85%;
   margin: auto;
+  padding-bottom: 14em;
 }
 
 #productos > li {
@@ -436,7 +437,7 @@ h4 {
 
 .InputCheck {
   width: 100%;
-  height: 50px;
+
 }
 
 .labelCheck {
@@ -445,11 +446,14 @@ h4 {
 
 .modalContenedor {
   display: flex;
+  color: white;
+  background-color: #292929 !important;
   align-items: flex-start !important;
+  padding: 1em 2.7em !important;
 }
 
 .divCheck {
-  margin: 20px 0px 20px 0px;
+  margin: 20px 0px;
   display: flex;
 }
 
@@ -468,4 +472,70 @@ h4 {
   justify-content: center;
   width: 100%;
   margin-top: 20px;
+}
+
+.InputCheck {
+  color: #12af27;
+  border: 2px solid #414141;
+  border-radius: 10px;
+  padding: 10px 25px;
+  background: transparent;
+}
+
+.inputCheck:active {
+  box-shadow: 2px 2px 15px #ffffff inset;
+}
+
+.labelCheck {
+  font-size: medium;
+}
+.h3-checkout{
+ margin: 0 auto 0.5em;
+}
+
+  
+
+#submitButton {
+  width: 10em;
+  position: relative;
+  height: 3em;
+  border: 3px ridge #5fea14;
+  outline: none;
+  background-color: transparent;
+  color: white;
+  transition: 1s;
+  border-radius: 0.3em;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+#submitButton::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 3%;
+  width: 95%;
+  height: 40%;
+  background-color: #292929;
+  transition: 0.5s;
+  transform-origin: center;
+}
+
+#submitButton::before {
+  content: "";
+  transform-origin: center;
+  position: absolute;
+  top: 80%;
+  left: 3%;
+  width: 95%;
+  height: 40%;
+  background-color:#292929;
+  transition: 0.5s;
+}
+
+#submitButton:hover::before,#submitButton:hover::after {
+  transform: scale(0)
+}
+#submitButton:hover {
+  box-shadow: inset 0px 0px 25px#5fea14;
 }
