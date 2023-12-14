@@ -212,7 +212,7 @@ let creacionUi = function (valor1 = 0, valor2 = 0) {
     let parrafos1 = crearEtiqueta("p", {}, productos[i].descripcion);
     li.lastElementChild.append(parrafos1);
 
-    let parrafos2 = crearEtiqueta("p", {}, `$${productos[i].precio}`);
+    let parrafos2 = crearEtiqueta("p", {}, `Precio: ${productos[i].precio}`);
     li.lastElementChild.append(parrafos2);
 
     let parrafos3 = crearEtiqueta(
@@ -242,13 +242,13 @@ let creacionUi = function (valor1 = 0, valor2 = 0) {
     //Evento Actival modal
     imagen.addEventListener("click", () => {
       modalCreator(
+        productos[i].id,
         imagen.src,
         imagen.alt,
         titulo1.innerText,
         parrafos1.innerText,
-        parrafos2.innerText,
-        parrafos3.innerText,
-        boton
+        productos[i].precio,
+        parrafos3.innerText
       );
     });
   }
@@ -257,6 +257,7 @@ let creacionUi = function (valor1 = 0, valor2 = 0) {
 creacionUi(0, 16);
 
 const modalCreator = (
+  id,
   imgSrc,
   ImgAlt,
   nombre,
@@ -264,6 +265,8 @@ const modalCreator = (
   precio,
   categoria
 ) => {
+  carritoArray.push(id);
+
   let modal = crearEtiqueta("div", {
     class: "modal modalProducto",
     id: "modalProducto",
@@ -297,7 +300,7 @@ const modalCreator = (
   let modalP1 = crearEtiqueta("p", {}, descripcion);
   modalContenedor.appendChild(modalP1);
 
-  let modalP2 = crearEtiqueta("p", {}, "Precio ");
+  let modalP2 = crearEtiqueta("p", {}, "Precio: $");
   modalContenedor.appendChild(modalP2);
 
   let modalSpan = crearEtiqueta("span", {}, precio);
@@ -306,16 +309,18 @@ const modalCreator = (
   let categoria1 = crearEtiqueta("p", {}, categoria);
   modalContenedor.appendChild(categoria1);
 
-  let modalButton = crearEtiqueta("button", {}, "agregar");
+  let modalButton = crearEtiqueta(
+    "button",
+    { class: "button-producto" },
+    "agregar"
+  );
   modalContenedor.appendChild(modalButton);
-  modalButton.classList.add("button-producto");
 
   modalButton.addEventListener("click", () => {
+    acumulador += Number(precio);
+    acumulado.innerText = "";
     contador++;
     minicarrito.innerText = contador;
-    acumulador += Number(precio);
-    console.log(acumulador);
-    acumulado.innerText = "";
     acumulado.innerText += acumulador;
   });
 
