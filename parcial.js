@@ -634,6 +634,8 @@ const modalResumen = function (name) {
   divCard.appendChild(p);
 };
 const modalCheckOut = function () {
+  document.getElementById("modalCarrito").remove();
+
   let modalCheck = crearEtiqueta("div", {
     class: "modal",
     id: "modalCheck",
