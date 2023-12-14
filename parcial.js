@@ -322,6 +322,7 @@ const modalCreator = (
     contador++;
     minicarrito.innerText = contador;
     acumulado.innerText += acumulador;
+    modal.remove();
   });
 
   modalA.addEventListener("click", () => {
@@ -413,23 +414,22 @@ const modalCarrito = () => {
       }
     });
   }
-  let p = crearEtiqueta(
-    "p",
-    { class: "contador" },
-    `items: ${contador} - Total ${acumulador}`
-  );
-  div1.appendChild(p);
 
   if (carritoArray.length > 0) {
     let buttonCheckout = crearEtiqueta(
       "button",
       {
-        title: "Eliminar Producto",
         id: "checkout-pago",
         class: "button-producto",
       },
       `Pagar: ${acumulador}`
     );
+    let p = crearEtiqueta(
+      "p",
+      { class: "contador" },
+      `items: ${contador} - Total ${acumulador}`
+    );
+    div1.appendChild(p);
     buttonCheckout.addEventListener("click", modalCheckOut);
     div1.appendChild(buttonCheckout);
     let buttonVaciar = crearEtiqueta(
@@ -537,7 +537,7 @@ document.addEventListener("click", function (event) {
     event.target.remove();
   }
 });
-const modalResumen = function () {
+const modalResumen = function (name) {
   // Crea y muestra el nuevo modal en respuesta al envío del formulario
 
   let modalRespuesta = crearEtiqueta("div", {
@@ -569,10 +569,32 @@ const modalResumen = function () {
 
   let titulo = crearEtiqueta("h2", { class: "h2" }, "Resumen de compra");
   divCard.appendChild(titulo);
-  let h3 = crearEtiqueta("h3", { class: "h3" }, "Gracias por su compra");
+  let h3 = crearEtiqueta("h3", {
+  
+  });
+
+  let spanGracias = crearEtiqueta(
+    "span",
+    {
+       class: "h3",
+    },
+    "Gracias por su compra "
+  );
+  let spanNombre = crearEtiqueta(
+    "span",
+    {
+      class:"span",
+    },
+    "  " + name
+  );
+
+  h3.appendChild(spanGracias);
+  h3.appendChild(spanNombre);
+
   divCard.appendChild(h3);
-    let lista = crearEtiqueta("ul", { class: "li" }, "");
-    divCard.append(lista);
+  divCard.appendChild(h3);
+  let lista = crearEtiqueta("ul", { class: "li" }, "");
+  divCard.append(lista);
   for (let i = 0; i < carritoArray.length; i++) {
     let productoId = carritoArray[i];
     let producto = productos.find((p) => p.id === productoId);
@@ -585,8 +607,6 @@ const modalResumen = function () {
 
     let precio = crearEtiqueta("p", {}, `$${producto.precio}`);
     items.appendChild(precio);
-
-
   }
   let p = crearEtiqueta("p", { class: "contador" }, `Total ${acumulador}`);
   divCard.appendChild(p);
@@ -605,8 +625,11 @@ const modalCheckOut = function () {
   });
   modalContenedor.addEventListener("submit", (e) => {
     e.preventDefault();
+
+    let nombreValue = document.getElementById("nombreInput").value;
     modalCheck.remove();
-    modalResumen();
+
+    modalResumen(nombreValue);
   });
 
   modalCheck.appendChild(modalContenedor);
@@ -633,15 +656,18 @@ const modalCheckOut = function () {
     "Datos personales"
   );
   modalContenedor.appendChild(titulo);
-  let label = crearEtiqueta(
-    "label",
-    { class: "labelCheck", placeholder: "nombre" },
-    "Nombre:"
-  );
+  let label = crearEtiqueta("label", { class: "labelCheck" }, "Nombre:");
   modalContenedor.appendChild(label);
 
-  let inputName = crearEtiqueta("input", { type: "text", class: "InputCheck" });
+  let inputName = crearEtiqueta("input", {
+    type: "text",
+    class: "InputCheck",
+    id: "nombreInput",
+    required: true,
+  });
+
   modalContenedor.appendChild(inputName);
+  const nombreValue = document.getElementById("nombreInput").value;
 
   let labelTelefono = crearEtiqueta(
     "label",
@@ -717,10 +743,7 @@ const modalCheckOut = function () {
     { type: "submit", id: "submitButton" },
     "enviar"
   );
+  console.log(nombreValue);
 
   divSubmit.appendChild(submit);
 };
-
-document
-  .getElementById("checkout-pago")
-  .addEventListener("click", modalCheckOut);
