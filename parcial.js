@@ -548,6 +548,7 @@ document.addEventListener("keydown", function (event) {
     let modal2 = document.getElementById("divAnuncio");
     let modal3 = document.getElementById("modalCarrito");
     let modal4 = document.getElementById("modalCheck");
+    let modal5 = document.getElementById("modalRespuesta");
 
     if (modal1 !== null) {
       modal1.remove();
@@ -557,6 +558,8 @@ document.addEventListener("keydown", function (event) {
       modal3.remove();
     } else if (modal4 !== null) {
       modal4.remove();
+    } else if (modal5 !== null) {
+      modal5.remove();
     }
   }
 });
@@ -566,6 +569,7 @@ const modalResumen = function (name) {
 
   let modalRespuesta = crearEtiqueta("div", {
     class: "modal modalRespuesta",
+    id: "modalRespuesta",
   });
 
   document.querySelector("main").appendChild(modalRespuesta);
