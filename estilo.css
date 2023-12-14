@@ -539,13 +539,17 @@ h4 {
   box-shadow: inset 0px 0px 25px#5fea14;
 }
 .h2{
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
 }
 .modalResumen{
+  background-color: rgb(32, 32, 32) !important;
   width: 60em !important;
- 
 
 }
+.resumen-imagen{
+  width: 5em;
+ 
+}
 .h3{
-  color: #000000;
+  color: #989898;
 }

@@ -566,16 +566,30 @@ const modalResumen = function () {
     class: "modalResumen",
   });
   modalRespuesta.appendChild(divCard);
-  let img = crearEtiqueta("img", {
-    src: "/fotos/logo-razer.svg",
-    alt: "logo",
-    class: "resumen-imagen",
-  });
-  divCard.appendChild(img);
+
   let titulo = crearEtiqueta("h2", { class: "h2" }, "Resumen de compra");
   divCard.appendChild(titulo);
   let h3 = crearEtiqueta("h3", { class: "h3" }, "Gracias por su compra");
   divCard.appendChild(h3);
+    let lista = crearEtiqueta("ul", { class: "li" }, "");
+    divCard.append(lista);
+  for (let i = 0; i < carritoArray.length; i++) {
+    let productoId = carritoArray[i];
+    let producto = productos.find((p) => p.id === productoId);
+
+    let items = crearEtiqueta("li", {});
+    lista.append(items);
+
+    let nombre = crearEtiqueta("h3", {}, producto.nombre);
+    items.appendChild(nombre);
+
+    let precio = crearEtiqueta("p", {}, `$${producto.precio}`);
+    items.appendChild(precio);
+
+
+  }
+  let p = crearEtiqueta("p", { class: "contador" }, `Total ${acumulador}`);
+  divCard.appendChild(p);
 };
 const modalCheckOut = function () {
   let modalCheck = crearEtiqueta("div", {
