@@ -437,7 +437,6 @@ h4 {
 
 .InputCheck {
   width: 100%;
-
 }
 
 .labelCheck {
@@ -447,6 +446,7 @@ h4 {
 .modalContenedor {
   display: flex;
   color: white;
+  flex-direction: column;
   background-color: #292929 !important;
   align-items: flex-start !important;
   padding: 1em 2.7em !important;
@@ -489,11 +489,9 @@ h4 {
 .labelCheck {
   font-size: medium;
 }
-.h3-checkout{
- margin: 0 auto 0.5em;
+.h3-checkout {
+  margin: 0 auto 0.5em;
 }
-
-  
 
 #submitButton {
   width: 10em;
@@ -529,12 +527,13 @@ h4 {
   left: 3%;
   width: 95%;
   height: 40%;
-  background-color:#292929;
+  background-color: #292929;
   transition: 0.5s;
 }
 
-#submitButton:hover::before,#submitButton:hover::after {
-  transform: scale(0)
+#submitButton:hover::before,
+#submitButton:hover::after {
+  transform: scale(0);
 }
 #submitButton:hover {
   box-shadow: inset 0px 0px 25px#5fea14;

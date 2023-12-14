@@ -420,7 +420,7 @@ const modalCarrito = () => {
       "button",
       {
         title: "Eliminar Producto",
-        id:"checkout-pago",
+        id: "checkout-pago",
         class: "button-producto",
       },
       `Pagar: ${acumulador}`
@@ -532,6 +532,7 @@ document.addEventListener("click", function (event) {
     event.target.remove();
   }
 });
+
 const modalCheckOut = function () {
   let modalCheck = crearEtiqueta("div", {
     class: "modal",
@@ -539,8 +540,10 @@ const modalCheckOut = function () {
 
   document.querySelector("main").appendChild(modalCheck);
 
-  let modalContenedor = crearEtiqueta("div", {
+  let modalContenedor = crearEtiqueta("form", {
     class: "modalContenedor",
+    action: "EJEMPLO",
+    method: "post",
   });
   modalCheck.appendChild(modalContenedor);
 
@@ -560,14 +563,18 @@ const modalCheckOut = function () {
 
     modalCheck.remove();
   });
-let titulo = crearEtiqueta("h2" , {class:"h3-checkout"}, "Datos personales")
-modalContenedor.appendChild(titulo)
+  let titulo = crearEtiqueta(
+    "h2",
+    { class: "h3-checkout" },
+    "Datos personales"
+  );
+  modalContenedor.appendChild(titulo);
   let label = crearEtiqueta(
     "label",
     { class: "labelCheck", placeholder: "nombre" },
     "Nombre:"
   );
-  modalContenedor.appendChild(label); 
+  modalContenedor.appendChild(label);
 
   let inputName = crearEtiqueta("input", { type: "text", class: "InputCheck" });
   modalContenedor.appendChild(inputName);
@@ -649,5 +656,6 @@ modalContenedor.appendChild(titulo)
   divSubmit.appendChild(submit);
 };
 
-
-document.getElementById("checkout").addEventListener("click", modalCheckOut);
+document
+  .getElementById("checkout-pago")
+  .addEventListener("click", modalCheckOut);
