@@ -535,8 +535,13 @@ const eliminarAnuncio = () => {
 document.addEventListener("click", function (event) {
   if (event.target.classList.contains("modalAnuncio")) {
     event.target.remove();
+  } else if (event.target.classList.contains("modalProducto")) {
+    event.target.remove();
+  } else if (event.target.classList.contains("modal")) {
+    event.target.remove();
   }
 });
+
 const modalResumen = function (name) {
   // Crea y muestra el nuevo modal en respuesta al envío del formulario
 
@@ -569,21 +574,19 @@ const modalResumen = function (name) {
 
   let titulo = crearEtiqueta("h2", { class: "h2" }, "Resumen de compra");
   divCard.appendChild(titulo);
-  let h3 = crearEtiqueta("h3", {
-  
-  });
+  let h3 = crearEtiqueta("h3", {});
 
   let spanGracias = crearEtiqueta(
     "span",
     {
-       class: "h3",
+      class: "h3",
     },
     "Gracias por su compra "
   );
   let spanNombre = crearEtiqueta(
     "span",
     {
-      class:"span",
+      class: "span",
     },
     "  " + name
   );

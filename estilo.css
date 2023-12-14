@@ -420,8 +420,8 @@ h4 {
   transition-duration: 400ms;
   transition-property: width, left;
 }
-.buttonComprar {
-}
+/* .buttonComprar {
+} */
 .button-eliminar {
   background-color: transparent;
   border: 1px solid red;
@@ -538,23 +538,21 @@ h4 {
 #submitButton:hover {
   box-shadow: inset 0px 0px 25px#5fea14;
 }
-.h2{
+.h2 {
   color: rgb(255, 255, 255);
 }
-.modalResumen{
+.modalResumen {
   background-color: rgb(32, 32, 32) !important;
   width: 60em !important;
-
 }
-.resumen-imagen{
+.resumen-imagen {
   width: 5em;
- 
 }
-.h3{
+.h3 {
   color: #989898 !important;
 }
-.span{
-   font-weight: 700;
-   color: #12af27;
-   margin-left: 5px;
+.span {
+  font-weight: 700;
+  color: #12af27;
+  margin-left: 5px;
 }
