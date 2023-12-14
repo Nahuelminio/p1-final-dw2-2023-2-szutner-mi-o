@@ -542,6 +542,25 @@ document.addEventListener("click", function (event) {
   }
 });
 
+document.addEventListener("keydown", function (event) {
+  if (event.key === "Escape") {
+    let modal1 = document.getElementById("modalProducto");
+    let modal2 = document.getElementById("divAnuncio");
+    let modal3 = document.getElementById("modalCarrito");
+    let modal4 = document.getElementById("modalCheck");
+
+    if (modal1 !== null) {
+      modal1.remove();
+    } else if (modal2 !== null) {
+      modal2.remove();
+    } else if (modal3 !== null) {
+      modal3.remove();
+    } else if (modal4 !== null) {
+      modal4.remove();
+    }
+  }
+});
+
 const modalResumen = function (name) {
   // Crea y muestra el nuevo modal en respuesta al envío del formulario
 
@@ -617,6 +636,7 @@ const modalResumen = function (name) {
 const modalCheckOut = function () {
   let modalCheck = crearEtiqueta("div", {
     class: "modal",
+    id: "modalCheck",
   });
 
   document.querySelector("main").appendChild(modalCheck);
@@ -746,7 +766,6 @@ const modalCheckOut = function () {
     { type: "submit", id: "submitButton" },
     "enviar"
   );
-  console.log(nombreValue);
 
   divSubmit.appendChild(submit);
 };
