@@ -538,3 +538,14 @@ h4 {
 #submitButton:hover {
   box-shadow: inset 0px 0px 25px#5fea14;
 }
+.h2{
+  color: rgb(0, 0, 0);
+}
+.modalResumen{
+  width: 60em !important;
+ 
+
+}
+.h3{
+  color: #000000;
+}

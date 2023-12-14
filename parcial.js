@@ -537,7 +537,46 @@ document.addEventListener("click", function (event) {
     event.target.remove();
   }
 });
+const modalResumen = function () {
+  // Crea y muestra el nuevo modal en respuesta al envío del formulario
 
+  let modalRespuesta = crearEtiqueta("div", {
+    class: "modal modalRespuesta",
+  });
+
+  document.querySelector("main").appendChild(modalRespuesta);
+
+  // Resto del código para el nuevo modal de respuesta...
+  let a = crearEtiqueta(
+    "a",
+    {
+      class: "cerrar",
+      href: "javascript:void(0)",
+    },
+
+    "X"
+  );
+  modalRespuesta.appendChild(a);
+  a.addEventListener("click", () => {
+    // Cerrar el modal al hacer clic en el enlace de cierre
+
+    modalRespuesta.remove();
+  });
+  let divCard = crearEtiqueta("div", {
+    class: "modalResumen",
+  });
+  modalRespuesta.appendChild(divCard);
+  let img = crearEtiqueta("img", {
+    src: "/fotos/logo-razer.svg",
+    alt: "logo",
+    class: "resumen-imagen",
+  });
+  divCard.appendChild(img);
+  let titulo = crearEtiqueta("h2", { class: "h2" }, "Resumen de compra");
+  divCard.appendChild(titulo);
+  let h3 = crearEtiqueta("h3", { class: "h3" }, "Gracias por su compra");
+  divCard.appendChild(h3);
+};
 const modalCheckOut = function () {
   let modalCheck = crearEtiqueta("div", {
     class: "modal",
@@ -550,6 +589,12 @@ const modalCheckOut = function () {
     action: "EJEMPLO",
     method: "post",
   });
+  modalContenedor.addEventListener("submit", (e) => {
+    e.preventDefault();
+    modalCheck.remove();
+    modalResumen();
+  });
+
   modalCheck.appendChild(modalContenedor);
 
   let a = crearEtiqueta(
@@ -658,6 +703,7 @@ const modalCheckOut = function () {
     { type: "submit", id: "submitButton" },
     "enviar"
   );
+
   divSubmit.appendChild(submit);
 };
 
