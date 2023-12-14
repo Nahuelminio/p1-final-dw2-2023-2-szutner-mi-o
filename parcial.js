@@ -775,3 +775,11 @@ const modalCheckOut = function () {
 
   divSubmit.appendChild(submit);
 };
+
+document.getElementById("logoRazer").addEventListener("click", function () {
+  let productosRazer = document.getElementById("productos");
+  while (productosRazer.firstChild) {
+    productosRazer.removeChild(productosRazer.firstChild);
+  }
+  creacionUi(0, 16);
+});
