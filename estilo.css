@@ -234,7 +234,8 @@ div h3 {
   /*color: #d0e0e3;*/
 }
 
-.modal a.cerrar {
+.modal a.cerrar,
+#divAnuncio > a {
   position: fixed;
   z-index: 1;
   display: flex;

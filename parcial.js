@@ -517,6 +517,20 @@ const crearAnuncio = () => {
     { id: "divAnuncio", class: "modalAnuncio" },
     ""
   );
+  let a = crearEtiqueta(
+    "a",
+    {
+      class: "cerrar",
+      href: "javascript:void(0)",
+    },
+
+    "X"
+  );
+  divAnuncio.appendChild(a);
+  a.addEventListener("click", () => {
+    // Cerrar el modal al hacer clic en el enlace de cierre
+    divAnuncio.remove();
+  });
 
   let anuncio = crearEtiqueta("img", {
     src: `fotos/Anuncios/anuncio${randomNumber()}.png`,
