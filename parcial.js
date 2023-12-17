@@ -440,27 +440,7 @@ const modalCarrito = () => {
     div1.appendChild(buttonVaciar);
 
     buttonVaciar.addEventListener("click", () => {
-      // Vaciar el array del carrito
-
-      carritoArray = [];
-
-      // Reiniciar contadores
-
-      contador = 0;
-      acumulador = 0;
-
-      // Actualizar las visualizaciones en la interfaz
-
-      minicarrito.innerText = contador;
-      acumulado.innerText = acumulador;
-
-      // Eliminar elementos del carrito en la interfaz
-
-      let divCarrito = document.getElementById("modalCarrito");
-
-      if (divCarrito) {
-        divCarrito.remove();
-      }
+      vaciar();
     });
   } else {
     let h4 = crearEtiqueta("h4", {}, "Tu carrito esta vacío!");
@@ -673,6 +653,7 @@ const modalCheckOut = function () {
     modalCheck.remove();
 
     modalResumen(nombreValue);
+    vaciar();
   });
 
   modalCheck.appendChild(modalContenedor);
@@ -797,3 +778,25 @@ document.getElementById("logoRazer").addEventListener("click", function () {
   }
   creacionUi(0, 16);
 });
+
+let vaciar = function () {
+  carritoArray = [];
+
+  // Reiniciar contadores
+
+  contador = 0;
+  acumulador = 0;
+
+  // Actualizar las visualizaciones en la interfaz
+
+  minicarrito.innerText = contador;
+  acumulado.innerText = acumulador;
+
+  // Eliminar elementos del carrito en la interfaz
+
+  let divCarrito = document.getElementById("modalCarrito");
+
+  if (divCarrito) {
+    divCarrito.remove();
+  }
+};
